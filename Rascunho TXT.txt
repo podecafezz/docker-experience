@@ -1,0 +1,3 @@
+docker run -e MYSQL_ROOT_PASSWARD=minha-senha --name db -v /app:/var/lib/mysql -d mysql:latest
+
+dokcer run -e JOOMLA_DB_USER=root -e JOOMLA_DB_PASSWORD=minha-senha --name joomla --link db:mysql -p 8080:80 -d joomla:php8.0
